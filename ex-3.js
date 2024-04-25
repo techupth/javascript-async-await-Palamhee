@@ -33,3 +33,14 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+const onSuccess = (data) => {
+  return console.log(data);
+};
+const onFailure = (error) => {
+  return console.log(error);
+}
+getJohnProfile()
+  .then(onSuccess)
+  .then(getJohnOrders)
+  .then(onSuccess)
+.catch(onFailure);
